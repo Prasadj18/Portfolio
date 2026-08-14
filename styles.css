@@ -1412,15 +1412,15 @@ grid-template-columns:1fr;
 
   min-height: 190px;
 
-  background: linear-gradient(180deg, rgba(12,12,12,0.98), rgba(6,6,6,0.96));
+  background: linear-gradient(180deg, rgb(244, 204, 149), rgba(108, 103, 95, 0.856));
 
-  border: 1px solid rgba(233,225,212,0.08);
+  border: 1px solid rgba(21, 19, 15, 0.886);
 
   border-radius: 12px;
 
-  box-shadow: 0 10px 22px rgba(8,8,7,0.14), inset 0 -6px 14px rgba(0,0,0,0.12);
+  box-shadow: 0 7px 15px rgba(116, 115, 115, 0.571), inset 0 -3px 14px rgba(0,0,0,0.12);
 
-  transition: transform 0.35s cubic-bezier(0.22,0.8,0.25,1), box-shadow 0.35s ease, border-color 0.25s ease;
+  transition: transform 0.60s cubic-bezier(0.22,0.8,0.25,1), box-shadow 0.60s ease, border-color 0.25s ease;
 }
 
 .skill-col::before {
@@ -1434,9 +1434,9 @@ grid-template-columns:1fr;
   width: 100%;
   height: 2px;
 
-  background: linear-gradient(90deg, var(--orange), #ff8438);
+  background: linear-gradient(90deg, var(--orange), #eb6e20);
 
-  box-shadow: 0 0 12px rgba(207, 85, 9, 0.7);
+  box-shadow: 0 0 12px rgba(94, 46, 15, 0.796);
 
   transform: scaleX(0);
   transform-origin: left;
@@ -1451,7 +1451,7 @@ grid-template-columns:1fr;
 .skill-col:hover {
   transform: translateY(-8px);
   box-shadow: 0 28px 48px rgba(2,2,2,0.36), inset 0 -8px 18px rgba(0,0,0,0.18);
-  border-color: rgba(219,87,5,0.16);
+  border-color: rgb(235, 119, 47);
 }
 
 /* Staggered reveal once the parent .skill-cols becomes visible */
@@ -1502,7 +1502,7 @@ grid-template-columns:1fr;
 
   margin-bottom: 13px;
 
-  color: #d4ccc0;
+  color: #000000;
 
   line-height: 1.35;
 }
