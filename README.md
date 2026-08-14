@@ -1,4 +1,4 @@
-# Prasada Jahagirdar — Dither-inspired Portfolio
+# Prasada - Portfolio
 
 ## Run locally
 Open `index.html` directly in a browser, or run:
