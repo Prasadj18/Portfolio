@@ -1,22 +1,69 @@
-# Prasada - Portfolio
+# Prasada — Developer Portfolio
 
-## Run locally
-Open `index.html` directly in a browser, or run:
+A personal developer portfolio showcasing my projects, technical skills, education, and software engineering interests.
 
-```bash
-python -m http.server 8000
-```
+🌐 **Live Website:** https://prasada-dev.netlify.app/
 
-Then visit `http://localhost:8000`.
+---
 
-## Deploy
-The project is static and can be deployed directly to GitHub Pages, Netlify, Vercel, or any static host.
+## 👨‍💻 About
 
-## Included
-- Responsive editorial/brutalist dark theme
-- Cream + orange accent palette
-- Subtle technical grid
-- Scroll reveal animations
-- Responsive mobile navigation
-- Project, skills, education, about and contact sections
-- User-provided reference artwork in `assets/hero-reference.png`
+I'm Prasada, an Information Science & Engineering student at BMS College of Engineering, Bangalore.
+
+I'm interested in software engineering, full-stack development, blockchain technologies, and problem solving.
+
+This portfolio was built to showcase my projects, technical skills, academic background, and contact information.
+
+---
+
+## 🚀 Features
+
+- Responsive portfolio website
+- Modern dark-themed UI
+- Project showcase
+- Technical skills section
+- Education timeline
+- About section
+- Contact section
+- Resume download
+- LinkedIn, GitHub and LeetCode links
+- Interactive animations and UI effects
+- Contact form
+- Mobile-friendly navigation
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Netlify
+
+### Other Technologies
+
+- Git
+- GitHub
+- VS Code
+
+---
+
+## 📂 Project Structure
+
+```text
+prasad-portfolio/
+│
+├── assets/
+│   ├── favicon.png
+│   ├── Prasad photo.jpeg
+│   ├── Prasada.finalResume.pdf
+│   ├── realtime chat image.jpeg
+│   ├── blockchain.webp
+│   └── clinicmanagement.png
+│
+├── index.html
+├── styles.css
+├── README.md
+└── .gitignore
