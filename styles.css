@@ -1121,6 +1121,235 @@ nav {
   }
 }
 
+/* ==========================================================
+   CERTIFICATIONS
+========================================================== */
+
+.certifications{
+    background:var(--cream);
+    color:var(--black);
+    padding:120px 0;
+}
+
+.cert-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-top:55px;
+
+}
+
+/* CARD */
+
+.cert-card{
+
+    --tilt-x:0deg;
+    --tilt-y:0deg;
+    --lift:0px;
+
+    background:linear-gradient(
+        180deg,
+        rgba(10,10,10,.98),
+        rgba(6,6,6,.98)
+    );
+
+    color:var(--cream);
+
+    border:1px solid rgba(233,225,212,.12);
+
+    border-radius:14px;
+
+    min-height:330px;
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:
+        0 10px 22px rgba(8,8,7,.20),
+        inset 0 -4px 18px rgba(0,0,0,.18);
+
+    transition:
+        transform .4s cubic-bezier(.22,.8,.25,1),
+        border-color .25s ease,
+        box-shadow .35s ease;
+
+    will-change:transform;
+
+}
+
+.cert-card:hover{
+
+    transform:
+        perspective(1000px)
+        translateY(-12px)
+        rotateX(var(--tilt-x))
+        rotateY(var(--tilt-y));
+
+    border-color:var(--orange);
+
+    box-shadow:
+        0 30px 60px rgba(2,2,2,.45),
+        inset 0 -6px 18px rgba(0,0,0,.24);
+
+}
+
+/* ORGANIZATION */
+
+.cert-org{
+
+    font-size:11px;
+
+    color:var(--orange);
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+}
+
+/* TITLE */
+
+.cert-card h3{
+
+    font-family:var(--display);
+
+    font-size:28px;
+
+    line-height:1.05;
+
+    letter-spacing:-.04em;
+
+    margin:14px 0;
+
+    color:var(--cream-2);
+
+    transition:
+        color .25s ease,
+        transform .3s ease;
+
+}
+
+.cert-card h3::after{
+
+    content:"↗";
+
+    display:inline-block;
+
+    margin-left:.35em;
+
+    color:var(--orange);
+
+    opacity:0;
+
+    transform:translate(-5px,2px);
+
+    transition:
+        opacity .25s ease,
+        transform .3s ease;
+
+}
+
+.cert-card:hover h3{
+
+    color:var(--cream);
+
+    transform:translateX(3px);
+
+}
+
+.cert-card:hover h3::after{
+
+    opacity:1;
+
+    transform:translate(0);
+
+}
+
+/* DESCRIPTION */
+
+.cert-card p{
+
+    font-size:14px;
+
+    color:#bdb5aa;
+
+    line-height:1.6;
+
+    margin-bottom:auto;
+
+}
+
+/* FOOTER */
+
+.cert-footer{
+
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:18px;
+
+}
+
+.cert-footer span{
+
+    font-size:11px;
+
+    letter-spacing:.08em;
+
+    color:#9b9488;
+
+    text-transform:uppercase;
+
+}
+
+.cert-footer a{
+
+    color:var(--orange);
+
+    font-size:13px;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.cert-footer a:hover{
+
+    transform:translateX(4px);
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.cert-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
 /* =========================
    SKILLS
 ========================= */
@@ -1571,6 +1800,8 @@ nav {
 
   color: var(--cream);
 }
+
+
 
 /* =========================
    ABOUT
