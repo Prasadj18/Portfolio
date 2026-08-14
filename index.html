@@ -11,6 +11,9 @@
 
   <title>Prasada</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -66,7 +69,6 @@
 
       <div class="container hero-grid">
 
-
         <div class="hero-copy reveal">
 
           <div class="hero-kicker">
@@ -79,9 +81,9 @@
           </h1>
 
           <div class="hero-sub">
-            
-            <span class="orange">Building efficient, useful software with a focus on problem solving.</span>
-            
+            <span class="orange">
+              Building efficient, useful software with a focus on problem solving.
+            </span>
           </div>
 
           <p class="hero-desc">
@@ -102,11 +104,17 @@
               <span class="arrow">→</span>
             </a>
 
-            <a class="btn" href="assets/Prasada.finalResume.pdf" download aria-label="Download resume">
+            <a
+              class="btn"
+              href="assets/Prasada.finalResume.pdf"
+              download
+              aria-label="Download resume"
+            >
               Resume ↓
             </a>
 
             <div class="hero-eyes" aria-hidden="true">
+
               <span class="eye">
                 <span class="eye-pupil">
                   <span class="eye-highlight"></span>
@@ -120,6 +128,7 @@
                 </span>
                 <span class="eye-lid"></span>
               </span>
+
             </div>
 
           </div>
@@ -832,6 +841,7 @@
                   <a href="mailto:prasadjagirdar42@gmail.com">
                     prasadjagirdar42@gmail.com
                   </a>
+
                 </div>
 
               </div>
@@ -849,6 +859,7 @@
                   <a href="tel:+917760375325">
                     +91 7760375325
                   </a>
+
                 </div>
 
               </div>
@@ -870,6 +881,7 @@
                   >
                     linkedin.com/in/prasad-jahagirdar-5417032b4
                   </a>
+
                 </div>
 
               </div>
@@ -891,6 +903,7 @@
                   >
                     github.com/Prasadj18
                   </a>
+
                 </div>
 
               </div>
@@ -912,6 +925,7 @@
                   >
                     leetcode.com/u/prasadjk18
                   </a>
+
                 </div>
 
               </div>
@@ -1011,7 +1025,9 @@
         ✕
       </button>
 
-      <div class="eyebrow">Send a message</div>
+      <div class="eyebrow">
+        Send a message
+      </div>
 
       <h3 id="contactModalTitle" class="modal-title">
         Let's talk.
@@ -1025,32 +1041,64 @@
 
         <label class="form-field">
           <span>Name</span>
-          <input type="text" name="name" required autocomplete="name">
+          <input
+            type="text"
+            name="name"
+            required
+            autocomplete="name"
+          >
         </label>
 
         <label class="form-field">
           <span>Email</span>
-          <input type="email" name="email" required autocomplete="email">
+          <input
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+          >
         </label>
 
         <label class="form-field">
           <span>Message</span>
-          <textarea name="message" rows="5" required></textarea>
+          <textarea
+            name="message"
+            rows="5"
+            required
+          ></textarea>
         </label>
 
         <!-- Honeypot field to reduce spam; kept hidden from real users -->
-        <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off">
 
-        <button class="btn primary" type="submit" id="contactSubmit">
+        <input
+          type="text"
+          name="_gotcha"
+          class="form-honeypot"
+          tabindex="-1"
+          autocomplete="off"
+        >
+
+        <button
+          class="btn primary"
+          type="submit"
+          id="contactSubmit"
+        >
           Send Message
           <span class="arrow">→</span>
         </button>
 
-        <p class="form-status" id="contactFormStatus" role="status"></p>
+        <p
+          class="form-status"
+          id="contactFormStatus"
+          role="status"
+        ></p>
 
         <p class="form-fallback">
           Prefer email directly?
-          <a href="mailto:prasadjagirdar42@gmail.com">prasadjagirdar42@gmail.com</a>
+
+          <a href="mailto:prasadjagirdar42@gmail.com">
+            prasadjagirdar42@gmail.com
+          </a>
         </p>
 
       </form>
@@ -1125,6 +1173,7 @@
 
       });
 
+
     /* Education Timeline Progress */
 
     const timeline =
@@ -1135,14 +1184,27 @@
       let timelineTicking = false;
 
       function updateTimelineProgress() {
-        const bounds = timeline.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-        const start = viewportHeight * 0.65;
-        const end = viewportHeight * 0.45 - bounds.height;
-        const progress = Math.min(
-          1,
-          Math.max(0, (start - bounds.top) / (start - end))
-        );
+
+        const bounds =
+          timeline.getBoundingClientRect();
+
+        const viewportHeight =
+          window.innerHeight;
+
+        const start =
+          viewportHeight * 0.65;
+
+        const end =
+          viewportHeight * 0.45 - bounds.height;
+
+        const progress =
+          Math.min(
+            1,
+            Math.max(
+              0,
+              (start - bounds.top) / (start - end)
+            )
+          );
 
         timeline.style.setProperty(
           "--timeline-progress",
@@ -1152,12 +1214,20 @@
         timelineTicking = false;
       }
 
+
       function requestTimelineProgress() {
+
         if (!timelineTicking) {
-          window.requestAnimationFrame(updateTimelineProgress);
+
+          window.requestAnimationFrame(
+            updateTimelineProgress
+          );
+
           timelineTicking = true;
         }
+
       }
+
 
       window.addEventListener(
         "scroll",
@@ -1165,73 +1235,121 @@
         { passive: true }
       );
 
+
       window.addEventListener(
         "resize",
         requestTimelineProgress
       );
 
+
       requestTimelineProgress();
+
     }
+
 
     /* Magnetic Social Links */
 
     const socialDock =
       document.querySelector(".socials");
 
-    const finePointer = window.matchMedia(
-      "(hover: hover) and (pointer: fine)"
-    );
+    const finePointer =
+      window.matchMedia(
+        "(hover: hover) and (pointer: fine)"
+      );
+
 
     if (socialDock && finePointer.matches) {
+
       const socialLinks = [
         ...socialDock.querySelectorAll(".social")
       ];
 
+
       function resetSocialLinks() {
+
         socialLinks.forEach((link) => {
-          link.style.setProperty("--social-scale", "1");
-          link.style.setProperty("--social-lift", "0px");
+
+          link.style.setProperty(
+            "--social-scale",
+            "1"
+          );
+
+          link.style.setProperty(
+            "--social-lift",
+            "0px"
+          );
+
         });
+
       }
+
 
       socialDock.addEventListener(
         "pointermove",
         (event) => {
+
           socialLinks.forEach((link) => {
-            const bounds = link.getBoundingClientRect();
-            const center = bounds.left + bounds.width / 2;
-            const distance = Math.abs(event.clientX - center);
-            const strength = Math.max(0, 1 - distance / 112);
+
+            const bounds =
+              link.getBoundingClientRect();
+
+            const center =
+              bounds.left + bounds.width / 2;
+
+            const distance =
+              Math.abs(
+                event.clientX - center
+              );
+
+            const strength =
+              Math.max(
+                0,
+                1 - distance / 112
+              );
+
 
             link.style.setProperty(
               "--social-scale",
               (1 + strength * 0.15).toFixed(3)
             );
 
+
             link.style.setProperty(
               "--social-lift",
               `${(-strength * 7).toFixed(1)}px`
             );
+
           });
+
         }
       );
+
 
       socialDock.addEventListener(
         "pointerleave",
         resetSocialLinks
       );
+
     }
+
 
     /* Hero Eye Tracking */
 
     const heroEyes =
       document.querySelector(".hero-eyes");
 
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    );
+    const reducedMotion =
+      window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      );
 
-    if (heroEyes && finePointer.matches && !reducedMotion.matches) {
+
+    if (
+      heroEyes &&
+      finePointer.matches &&
+      !reducedMotion.matches
+    ) {
+
       const pupils = [
         ...heroEyes.querySelectorAll(".eye-pupil")
       ];
@@ -1240,46 +1358,87 @@
       let cursorX = 0;
       let cursorY = 0;
 
+
       function updateEyeTracking() {
+
         pupils.forEach((pupil) => {
-          const eye = pupil.closest(".eye");
-          const bounds = eye.getBoundingClientRect();
-          const centerX = bounds.left + bounds.width / 2;
-          const centerY = bounds.top + bounds.height / 2;
-          const deltaX = cursorX - centerX;
-          const deltaY = cursorY - centerY;
-          const distance = Math.hypot(deltaX, deltaY) || 1;
-          const travel = Math.min(6, distance / 26);
+
+          const eye =
+            pupil.closest(".eye");
+
+          const bounds =
+            eye.getBoundingClientRect();
+
+          const centerX =
+            bounds.left + bounds.width / 2;
+
+          const centerY =
+            bounds.top + bounds.height / 2;
+
+          const deltaX =
+            cursorX - centerX;
+
+          const deltaY =
+            cursorY - centerY;
+
+          const distance =
+            Math.hypot(deltaX, deltaY) || 1;
+
+          const travel =
+            Math.min(
+              6,
+              distance / 26
+            );
+
 
           pupil.style.setProperty(
             "--pupil-x",
-            `${(deltaX / distance * travel).toFixed(2)}px`
+            `${(
+              deltaX / distance * travel
+            ).toFixed(2)}px`
           );
+
 
           pupil.style.setProperty(
             "--pupil-y",
-            `${(deltaY / distance * travel).toFixed(2)}px`
+            `${(
+              deltaY / distance * travel
+            ).toFixed(2)}px`
           );
+
         });
 
         eyeFrame = null;
+
       }
+
 
       window.addEventListener(
         "pointermove",
         (event) => {
-          cursorX = event.clientX;
-          cursorY = event.clientY;
+
+          cursorX =
+            event.clientX;
+
+          cursorY =
+            event.clientY;
+
 
           if (!eyeFrame) {
-            eyeFrame = window.requestAnimationFrame(
-              updateEyeTracking
-            );
+
+            eyeFrame =
+              window.requestAnimationFrame(
+                updateEyeTracking
+              );
+
           }
+
         },
         { passive: true }
       );
+
     }
+
 
     /* Contact ASCII Flow */
 
@@ -1292,15 +1451,33 @@
     const portraitSource =
       document.querySelector(".hero-art img");
 
-    if (contactAscii && contactCta && portraitSource) {
-      const contactContext = contactAscii.getContext("2d");
-      const sampleCanvas = document.createElement("canvas");
-      const sampleContext = sampleCanvas.getContext(
-        "2d",
-        { willReadFrequently: true }
-      );
 
-      if (contactContext && sampleContext) {
+    if (
+      contactAscii &&
+      contactCta &&
+      portraitSource
+    ) {
+
+      const contactContext =
+        contactAscii.getContext("2d");
+
+      const sampleCanvas =
+        document.createElement("canvas");
+
+      const sampleContext =
+        sampleCanvas.getContext(
+          "2d",
+          {
+            willReadFrequently: true
+          }
+        );
+
+
+      if (
+        contactContext &&
+        sampleContext
+      ) {
+
         const pointer = {
           x: 0,
           y: 0,
@@ -1309,7 +1486,10 @@
           active: false
         };
 
-        const asciiCharacters = " .:-=+*#%@";
+
+        const asciiCharacters =
+          " .:-=+*#%@";
+
         let width = 0;
         let height = 0;
         let visible = false;
@@ -1317,43 +1497,118 @@
         let lastDraw = 0;
         let started = false;
 
+
         function resizeContactAscii() {
-          const bounds = contactCta.getBoundingClientRect();
-          const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
 
-          width = Math.max(1, bounds.width);
-          height = Math.max(1, bounds.height);
+          const bounds =
+            contactCta.getBoundingClientRect();
 
-          contactAscii.width = Math.round(width * ratio);
-          contactAscii.height = Math.round(height * ratio);
-          contactAscii.style.width = `${width}px`;
-          contactAscii.style.height = `${height}px`;
+          const ratio =
+            Math.min(
+              window.devicePixelRatio || 1,
+              1.5
+            );
 
-          contactContext.setTransform(ratio, 0, 0, ratio, 0, 0);
+
+          width =
+            Math.max(
+              1,
+              bounds.width
+            );
+
+          height =
+            Math.max(
+              1,
+              bounds.height
+            );
+
+
+          contactAscii.width =
+            Math.round(
+              width * ratio
+            );
+
+          contactAscii.height =
+            Math.round(
+              height * ratio
+            );
+
+
+          contactAscii.style.width =
+            `${width}px`;
+
+          contactAscii.style.height =
+            `${height}px`;
+
+
+          contactContext.setTransform(
+            ratio,
+            0,
+            0,
+            ratio,
+            0,
+            0
+          );
+
         }
 
+
         function drawContactAscii(now) {
+
           if (!width || !height) return;
 
-          pointer.x += (pointer.targetX - pointer.x) * 0.1;
-          pointer.y += (pointer.targetY - pointer.y) * 0.1;
+
+          pointer.x +=
+            (pointer.targetX - pointer.x) * 0.1;
+
+          pointer.y +=
+            (pointer.targetY - pointer.y) * 0.1;
+
 
           const fontSize = 8;
           const cellWidth = 6.8;
           const cellHeight = 9.2;
-          const columns = Math.ceil(width / cellWidth);
-          const rows = Math.ceil(height / cellHeight);
-          const scale = Math.max(
-            columns / portraitSource.naturalWidth,
-            rows / portraitSource.naturalHeight
+
+          const columns =
+            Math.ceil(
+              width / cellWidth
+            );
+
+          const rows =
+            Math.ceil(
+              height / cellHeight
+            );
+
+
+          const scale =
+            Math.max(
+              columns / portraitSource.naturalWidth,
+              rows / portraitSource.naturalHeight
+            );
+
+
+          const imageWidth =
+            portraitSource.naturalWidth * scale;
+
+          const imageHeight =
+            portraitSource.naturalHeight * scale;
+
+
+          sampleCanvas.width =
+            columns;
+
+          sampleCanvas.height =
+            rows;
+
+
+          sampleContext.clearRect(
+            0,
+            0,
+            columns,
+            rows
           );
-          const imageWidth = portraitSource.naturalWidth * scale;
-          const imageHeight = portraitSource.naturalHeight * scale;
 
-          sampleCanvas.width = columns;
-          sampleCanvas.height = rows;
 
-          sampleContext.clearRect(0, 0, columns, rows);
           sampleContext.drawImage(
             portraitSource,
             (columns - imageWidth) / 2,
@@ -1362,185 +1617,372 @@
             imageHeight
           );
 
-          const pixels = sampleContext.getImageData(
+
+          const pixels =
+            sampleContext.getImageData(
+              0,
+              0,
+              columns,
+              rows
+            ).data;
+
+
+          contactContext.clearRect(
             0,
             0,
-            columns,
-            rows
-          ).data;
+            width,
+            height
+          );
 
-          contactContext.clearRect(0, 0, width, height);
-          contactContext.font = `700 ${fontSize}px ui-monospace, monospace`;
-          contactContext.textBaseline = "top";
 
-          const pointerColumn = pointer.x / width * columns;
-          const pointerRow = pointer.y / height * rows;
+          contactContext.font =
+            `700 ${fontSize}px ui-monospace, monospace`;
 
-          for (let row = 0; row < rows; row++) {
-            for (let column = 0; column < columns; column++) {
-              const flow = Math.sin(
-                row * 0.2 + column * 0.09 + now * 0.001
-              ) * 0.8;
-              let sourceColumn = Math.round(column - flow);
-              let sourceRow = row;
-              let influence = 0;
+          contactContext.textBaseline =
+            "top";
 
-              if (pointer.active) {
-                const distance = Math.hypot(
-                  column - pointerColumn,
-                  row - pointerRow
+
+          const pointerColumn =
+            pointer.x / width * columns;
+
+          const pointerRow =
+            pointer.y / height * rows;
+
+
+          for (
+            let row = 0;
+            row < rows;
+            row++
+          ) {
+
+            for (
+              let column = 0;
+              column < columns;
+              column++
+            ) {
+
+              const flow =
+                Math.sin(
+                  row * 0.2 +
+                  column * 0.09 +
+                  now * 0.001
+                ) * 0.8;
+
+
+              let sourceColumn =
+                Math.round(
+                  column - flow
                 );
 
-                influence = Math.max(0, 1 - distance / 16);
+              let sourceRow =
+                row;
+
+              let influence = 0;
+
+
+              if (pointer.active) {
+
+                const distance =
+                  Math.hypot(
+                    column - pointerColumn,
+                    row - pointerRow
+                  );
+
+
+                influence =
+                  Math.max(
+                    0,
+                    1 - distance / 16
+                  );
+
 
                 if (influence) {
-                  const ripple = Math.sin(
-                    distance * 0.8 - now * 0.006
-                  );
 
-                  sourceColumn += Math.round(
-                    ripple * influence * 3
-                  );
-                  sourceRow += Math.round(
-                    ripple * influence * 2
-                  );
+                  const ripple =
+                    Math.sin(
+                      distance * 0.8 -
+                      now * 0.006
+                    );
+
+
+                  sourceColumn +=
+                    Math.round(
+                      ripple *
+                      influence *
+                      3
+                    );
+
+
+                  sourceRow +=
+                    Math.round(
+                      ripple *
+                      influence *
+                      2
+                    );
+
                 }
+
               }
 
-              sourceColumn = Math.max(
-                0,
-                Math.min(columns - 1, sourceColumn)
-              );
-              sourceRow = Math.max(
-                0,
-                Math.min(rows - 1, sourceRow)
-              );
 
-              const pixel = (sourceRow * columns + sourceColumn) * 4;
-              const luminance = (
-                pixels[pixel] * 0.2126 +
-                pixels[pixel + 1] * 0.7152 +
-                pixels[pixel + 2] * 0.0722
-              ) / 255;
+              sourceColumn =
+                Math.max(
+                  0,
+                  Math.min(
+                    columns - 1,
+                    sourceColumn
+                  )
+                );
+
+
+              sourceRow =
+                Math.max(
+                  0,
+                  Math.min(
+                    rows - 1,
+                    sourceRow
+                  )
+                );
+
+
+              const pixel =
+                (
+                  sourceRow * columns +
+                  sourceColumn
+                ) * 4;
+
+
+              const luminance =
+                (
+                  pixels[pixel] * 0.2126 +
+                  pixels[pixel + 1] * 0.7152 +
+                  pixels[pixel + 2] * 0.0722
+                ) / 255;
+
 
               if (luminance < 0.34) continue;
 
-              const character = asciiCharacters[
-                Math.min(
-                  asciiCharacters.length - 1,
-                  Math.floor(luminance * asciiCharacters.length)
-                )
-              ];
+
+              const character =
+                asciiCharacters[
+                  Math.min(
+                    asciiCharacters.length - 1,
+                    Math.floor(
+                      luminance *
+                      asciiCharacters.length
+                    )
+                  )
+                ];
+
 
               if (!character?.trim()) continue;
+
 
               contactContext.fillStyle =
                 luminance > 0.68
                   ? "#f0e9de"
                   : "#db5705";
 
-              contactContext.globalAlpha = Math.min(
-                0.78,
-                0.24 + luminance * 0.48 + influence * 0.12
-              );
+
+              contactContext.globalAlpha =
+                Math.min(
+                  0.78,
+                  0.24 +
+                  luminance * 0.48 +
+                  influence * 0.12
+                );
+
 
               contactContext.fillText(
                 character,
                 column * cellWidth,
                 row * cellHeight
               );
+
             }
+
           }
+
 
           contactContext.globalAlpha = 1;
+
         }
+
 
         function animateContactAscii(now) {
+
           if (!visible) return;
 
-          if (now - lastDraw > 32) {
+
+          if (
+            now - lastDraw > 32
+          ) {
+
             drawContactAscii(now);
             lastDraw = now;
+
           }
 
-          frame = window.requestAnimationFrame(animateContactAscii);
+
+          frame =
+            window.requestAnimationFrame(
+              animateContactAscii
+            );
+
         }
+
 
         function startContactAscii() {
-          if (started || !portraitSource.naturalWidth) return;
+
+          if (
+            started ||
+            !portraitSource.naturalWidth
+          ) return;
+
 
           started = true;
+
           resizeContactAscii();
-          contactObserver.observe(contactCta);
+
+          contactObserver.observe(
+            contactCta
+          );
+
         }
 
-        const contactObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              visible = entry.isIntersecting;
 
-              if (!visible) {
-                if (frame) {
-                  window.cancelAnimationFrame(frame);
-                  frame = null;
+        const contactObserver =
+          new IntersectionObserver(
+            (entries) => {
+
+              entries.forEach((entry) => {
+
+                visible =
+                  entry.isIntersecting;
+
+
+                if (!visible) {
+
+                  if (frame) {
+
+                    window.cancelAnimationFrame(
+                      frame
+                    );
+
+                    frame = null;
+
+                  }
+
+                  return;
+
                 }
 
-                return;
-              }
 
-              drawContactAscii(performance.now());
-
-              if (finePointer.matches && !reducedMotion.matches) {
-                frame = window.requestAnimationFrame(
-                  animateContactAscii
+                drawContactAscii(
+                  performance.now()
                 );
-              }
-            });
-          },
-          { threshold: 0.08 }
+
+
+                if (
+                  finePointer.matches &&
+                  !reducedMotion.matches
+                ) {
+
+                  frame =
+                    window.requestAnimationFrame(
+                      animateContactAscii
+                    );
+
+                }
+
+              });
+
+            },
+            {
+              threshold: 0.08
+            }
+          );
+
+
+        const contactResizeObserver =
+          new ResizeObserver(() => {
+
+            if (!started) return;
+
+            resizeContactAscii();
+
+            if (visible) {
+
+              drawContactAscii(
+                performance.now()
+              );
+
+            }
+
+          });
+
+
+        contactResizeObserver.observe(
+          contactCta
         );
 
-        const contactResizeObserver = new ResizeObserver(() => {
-          if (!started) return;
-
-          resizeContactAscii();
-
-          if (visible) {
-            drawContactAscii(performance.now());
-          }
-        });
-
-        contactResizeObserver.observe(contactCta);
 
         if (finePointer.matches) {
+
           contactCta.addEventListener(
             "pointermove",
             (event) => {
-              const bounds = contactCta.getBoundingClientRect();
+
+              const bounds =
+                contactCta.getBoundingClientRect();
+
 
               pointer.active = true;
-              pointer.targetX = event.clientX - bounds.left;
-              pointer.targetY = event.clientY - bounds.top;
+
+              pointer.targetX =
+                event.clientX -
+                bounds.left;
+
+              pointer.targetY =
+                event.clientY -
+                bounds.top;
+
             }
           );
+
 
           contactCta.addEventListener(
             "pointerleave",
             () => {
+
               pointer.active = false;
+
             }
           );
+
         }
 
+
         if (portraitSource.complete) {
+
           startContactAscii();
+
         } else {
-          portraitSource.addEventListener("load", startContactAscii, {
-            once: true
-          });
+
+          portraitSource.addEventListener(
+            "load",
+            startContactAscii,
+            {
+              once: true
+            }
+          );
+
         }
+
       }
+
     }
+
 
     /* Project Card Tilt */
 
@@ -1548,153 +1990,315 @@
       ...document.querySelectorAll(".project-card")
     ];
 
+
     if (finePointer.matches) {
+
       projectCards.forEach((card) => {
+
         let frame = null;
         let pointerX = 0;
         let pointerY = 0;
 
+
         function updateProjectTilt() {
-          const bounds = card.getBoundingClientRect();
+
+          const bounds =
+            card.getBoundingClientRect();
+
+
           const horizontal =
-            (pointerX - bounds.left) / bounds.width - 0.5;
+            (pointerX - bounds.left) /
+              bounds.width -
+            0.5;
+
+
           const vertical =
-            (pointerY - bounds.top) / bounds.height - 0.5;
+            (pointerY - bounds.top) /
+              bounds.height -
+            0.5;
+
 
           card.style.setProperty(
             "--project-tilt-x",
             `${(-vertical * 5).toFixed(2)}deg`
           );
 
+
           card.style.setProperty(
             "--project-tilt-y",
             `${(horizontal * 5).toFixed(2)}deg`
           );
 
+
           frame = null;
+
         }
+
 
         function resetProjectTilt() {
+
           if (frame) {
-            window.cancelAnimationFrame(frame);
+
+            window.cancelAnimationFrame(
+              frame
+            );
+
             frame = null;
+
           }
 
-          card.style.removeProperty("--project-tilt-x");
-          card.style.removeProperty("--project-tilt-y");
+
+          card.style.removeProperty(
+            "--project-tilt-x"
+          );
+
+          card.style.removeProperty(
+            "--project-tilt-y"
+          );
+
         }
+
 
         card.addEventListener(
           "pointermove",
           (event) => {
-            pointerX = event.clientX;
-            pointerY = event.clientY;
+
+            pointerX =
+              event.clientX;
+
+            pointerY =
+              event.clientY;
+
 
             if (!frame) {
-              frame = window.requestAnimationFrame(
-                updateProjectTilt
-              );
+
+              frame =
+                window.requestAnimationFrame(
+                  updateProjectTilt
+                );
+
             }
+
           }
         );
+
 
         card.addEventListener(
           "pointerleave",
           resetProjectTilt
         );
+
       });
+
     }
+
 
     /* Letter Cascade Animation */
 
     function initLetterCascade() {
-      const element = document.getElementById('nameAnimation');
+
+      const element =
+        document.getElementById(
+          "nameAnimation"
+        );
+
+
       if (!element) return;
 
-      const text = element.textContent.trim();
-      element.textContent = '';
-      element.classList.add('letter-cascade');
+
+      const text =
+        element.textContent.trim();
+
+
+      element.textContent = "";
+
+      element.classList.add(
+        "letter-cascade"
+      );
+
 
       // Create letter spans
-      text.split('').forEach((letter) => {
-        const letterSpan = document.createElement('span');
-        letterSpan.className = 'cascade-letter';
-        letterSpan.innerHTML = `
-          <span class="cascade-front">${letter}</span>
-          <span class="cascade-echo">${letter}</span>
-        `;
-        element.appendChild(letterSpan);
-      });
+
+      text.split("").forEach(
+        (letter) => {
+
+          const letterSpan =
+            document.createElement(
+              "span"
+            );
+
+
+          letterSpan.className =
+            "cascade-letter";
+
+
+          letterSpan.innerHTML = `
+            <span class="cascade-front">${letter}</span>
+            <span class="cascade-echo">${letter}</span>
+          `;
+
+
+          element.appendChild(
+            letterSpan
+          );
+
+        }
+      );
+
 
       let animating = false;
 
+
       function animateCascade() {
+
         if (animating) return;
+
         animating = true;
 
-        const letters = element.querySelectorAll('.cascade-letter');
+
+        const letters =
+          element.querySelectorAll(
+            ".cascade-letter"
+          );
+
+
         const staggerDuration = 40;
         const animationDuration = 600;
 
-        letters.forEach((letter, index) => {
-          const delay = index * staggerDuration;
 
-          const frontSpan = letter.querySelector('.cascade-front');
-          const echoSpan = letter.querySelector('.cascade-echo');
+        letters.forEach(
+          (letter, index) => {
 
-          setTimeout(() => {
-            frontSpan.style.transition = `all ${animationDuration}ms cubic-bezier(0.34, 1.56, 0.64, 1)`;
-            frontSpan.style.transform = 'rotateX(90deg) translateY(-6px)';
-            frontSpan.style.opacity = '0';
-            frontSpan.style.filter = 'blur(4px)';
+            const delay =
+              index *
+              staggerDuration;
 
-            echoSpan.style.transition = `all ${animationDuration}ms cubic-bezier(0.34, 1.56, 0.64, 1)`;
-            echoSpan.style.transform = 'rotateX(0deg) translateY(0px) scale(1)';
-            echoSpan.style.opacity = '1';
-            echoSpan.style.filter = 'blur(0px)';
-          }, delay);
-        });
+
+            const frontSpan =
+              letter.querySelector(
+                ".cascade-front"
+              );
+
+
+            const echoSpan =
+              letter.querySelector(
+                ".cascade-echo"
+              );
+
+
+            setTimeout(() => {
+
+              frontSpan.style.transition =
+                `all ${animationDuration}ms cubic-bezier(0.34, 1.56, 0.64, 1)`;
+
+              frontSpan.style.transform =
+                "rotateX(90deg) translateY(-6px)";
+
+              frontSpan.style.opacity =
+                "0";
+
+              frontSpan.style.filter =
+                "blur(4px)";
+
+
+              echoSpan.style.transition =
+                `all ${animationDuration}ms cubic-bezier(0.34, 1.56, 0.64, 1)`;
+
+              echoSpan.style.transform =
+                "rotateX(0deg) translateY(0px) scale(1)";
+
+              echoSpan.style.opacity =
+                "1";
+
+              echoSpan.style.filter =
+                "blur(0px)";
+
+            }, delay);
+
+          }
+        );
+
 
         setTimeout(() => {
-          letters.forEach((letter) => {
-            const frontSpan = letter.querySelector('.cascade-front');
-            const echoSpan = letter.querySelector('.cascade-echo');
 
-            frontSpan.style.transition = 'none';
-            frontSpan.style.transform = 'rotateX(0) translateY(0)';
-            frontSpan.style.opacity = '1';
-            frontSpan.style.filter = 'blur(0px)';
+          letters.forEach(
+            (letter) => {
 
-            echoSpan.style.transition = 'none';
-            echoSpan.style.transform = 'rotateX(-90deg) translateY(6px) scale(0.8)';
-            echoSpan.style.opacity = '0';
-            echoSpan.style.filter = 'blur(4px)';
-          });
+              const frontSpan =
+                letter.querySelector(
+                  ".cascade-front"
+                );
+
+
+              const echoSpan =
+                letter.querySelector(
+                  ".cascade-echo"
+                );
+
+
+              frontSpan.style.transition =
+                "none";
+
+              frontSpan.style.transform =
+                "rotateX(0) translateY(0)";
+
+              frontSpan.style.opacity =
+                "1";
+
+              frontSpan.style.filter =
+                "blur(0px)";
+
+
+              echoSpan.style.transition =
+                "none";
+
+              echoSpan.style.transform =
+                "rotateX(-90deg) translateY(6px) scale(0.8)";
+
+              echoSpan.style.opacity =
+                "0";
+
+              echoSpan.style.filter =
+                "blur(4px)";
+
+            }
+          );
+
 
           animating = false;
-        }, animationDuration + (letters.length * staggerDuration));
+
+        }, animationDuration +
+          letters.length *
+          staggerDuration);
+
       }
 
-      element.addEventListener('mouseenter', animateCascade);
+
+      element.addEventListener(
+        "mouseenter",
+        animateCascade
+      );
+
     }
+
 
     initLetterCascade();
 
+
     /* Active Navigation */
 
-    const sections =
-      [
-        ...document.querySelectorAll(
-          "main section[id]"
-        )
-      ];
+    const sections = [
+      ...document.querySelectorAll(
+        "main section[id]"
+      )
+    ];
 
-    const nav =
-      [
-        ...document.querySelectorAll(
-          ".nav-links a"
-        )
-      ];
+
+    const nav = [
+      ...document.querySelectorAll(
+        ".nav-links a"
+      )
+    ];
 
 
     window.addEventListener(
@@ -1703,27 +2307,35 @@
 
         let current = "home";
 
-        sections.forEach((section) => {
 
-          if (
-            window.scrollY >=
-            section.offsetTop - 180
-          ) {
-            current = section.id;
+        sections.forEach(
+          (section) => {
+
+            if (
+              window.scrollY >=
+              section.offsetTop - 180
+            ) {
+
+              current =
+                section.id;
+
+            }
+
           }
+        );
 
-        });
 
+        nav.forEach(
+          (link) => {
 
-        nav.forEach((link) => {
+            link.classList.toggle(
+              "active",
+              link.getAttribute("href") ===
+                "#" + current
+            );
 
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") ===
-              "#" + current
-          );
-
-        });
+          }
+        );
 
       },
       {
@@ -1735,123 +2347,283 @@
     /* Contact Modal */
 
     const contactModalOverlay =
-      document.getElementById("contactModalOverlay");
+      document.getElementById(
+        "contactModalOverlay"
+      );
+
 
     const openContactModalBtn =
-      document.getElementById("openContactModal");
+      document.getElementById(
+        "openContactModal"
+      );
+
 
     const closeContactModalBtn =
-      document.getElementById("closeContactModal");
+      document.getElementById(
+        "closeContactModal"
+      );
+
 
     const contactForm =
-      document.getElementById("contactForm");
+      document.getElementById(
+        "contactForm"
+      );
+
 
     const contactFormStatus =
-      document.getElementById("contactFormStatus");
+      document.getElementById(
+        "contactFormStatus"
+      );
+
 
     const contactSubmitBtn =
-      document.getElementById("contactSubmit");
+      document.getElementById(
+        "contactSubmit"
+      );
+
 
     // TODO: replace with your own Formspree endpoint.
     // Sign up free at https://formspree.io, create a form pointed at
     // prasadjagirdar42@gmail.com, and paste its endpoint URL below.
+
     const CONTACT_FORM_ENDPOINT =
       "https://formspree.io/f/YOUR_FORM_ID";
 
+
     let lastFocusedElement = null;
 
+
     function openContactModal() {
-      lastFocusedElement = document.activeElement;
 
-      contactModalOverlay.hidden = false;
+      lastFocusedElement =
+        document.activeElement;
 
-      requestAnimationFrame(() => {
-        contactModalOverlay.classList.add("open");
-      });
 
-      const firstField = contactForm.querySelector("input, textarea");
-      if (firstField) firstField.focus();
+      contactModalOverlay.hidden =
+        false;
 
-      document.body.style.overflow = "hidden";
+
+      requestAnimationFrame(
+        () => {
+
+          contactModalOverlay.classList.add(
+            "open"
+          );
+
+        }
+      );
+
+
+      const firstField =
+        contactForm.querySelector(
+          "input, textarea"
+        );
+
+
+      if (firstField) {
+        firstField.focus();
+      }
+
+
+      document.body.style.overflow =
+        "hidden";
+
     }
+
 
     function closeContactModal() {
-      contactModalOverlay.classList.remove("open");
 
-      window.setTimeout(() => {
-        contactModalOverlay.hidden = true;
-      }, 220);
+      contactModalOverlay.classList.remove(
+        "open"
+      );
 
-      document.body.style.overflow = "";
 
-      if (lastFocusedElement) lastFocusedElement.focus();
+      window.setTimeout(
+        () => {
+
+          contactModalOverlay.hidden =
+            true;
+
+        },
+        220
+      );
+
+
+      document.body.style.overflow =
+        "";
+
+
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+
     }
+
 
     if (openContactModalBtn) {
-      openContactModalBtn.addEventListener("click", openContactModal);
+
+      openContactModalBtn.addEventListener(
+        "click",
+        openContactModal
+      );
+
     }
+
 
     if (closeContactModalBtn) {
-      closeContactModalBtn.addEventListener("click", closeContactModal);
+
+      closeContactModalBtn.addEventListener(
+        "click",
+        closeContactModal
+      );
+
     }
+
 
     if (contactModalOverlay) {
-      contactModalOverlay.addEventListener("click", (event) => {
-        if (event.target === contactModalOverlay) {
-          closeContactModal();
+
+      contactModalOverlay.addEventListener(
+        "click",
+        (event) => {
+
+          if (
+            event.target ===
+            contactModalOverlay
+          ) {
+
+            closeContactModal();
+
+          }
+
         }
-      });
+      );
+
     }
 
-    document.addEventListener("keydown", (event) => {
-      if (
-        event.key === "Escape" &&
-        contactModalOverlay &&
-        !contactModalOverlay.hidden
-      ) {
-        closeContactModal();
+
+    document.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (
+          event.key === "Escape" &&
+          contactModalOverlay &&
+          !contactModalOverlay.hidden
+        ) {
+
+          closeContactModal();
+
+        }
+
       }
-    });
+    );
+
 
     if (contactForm) {
-      contactForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
 
-        // Honeypot: if filled, silently drop (likely a bot)
-        const honeypot = contactForm.querySelector(".form-honeypot");
-        if (honeypot && honeypot.value) {
-          return;
-        }
+      contactForm.addEventListener(
+        "submit",
+        async (event) => {
 
-        contactSubmitBtn.disabled = true;
-        contactFormStatus.textContent = "Sending…";
-        contactFormStatus.className = "form-status";
+          event.preventDefault();
 
-        try {
-          const response = await fetch(CONTACT_FORM_ENDPOINT, {
-            method: "POST",
-            headers: { Accept: "application/json" },
-            body: new FormData(contactForm)
-          });
 
-          if (response.ok) {
-            contactFormStatus.textContent =
-              "Message sent — thanks! I'll reply soon.";
-            contactFormStatus.classList.add("success");
-            contactForm.reset();
+          // Honeypot: if filled, silently drop (likely a bot)
 
-            window.setTimeout(closeContactModal, 1600);
-          } else {
-            throw new Error("Request failed");
+          const honeypot =
+            contactForm.querySelector(
+              ".form-honeypot"
+            );
+
+
+          if (
+            honeypot &&
+            honeypot.value
+          ) {
+
+            return;
+
           }
-        } catch (error) {
+
+
+          contactSubmitBtn.disabled =
+            true;
+
+
           contactFormStatus.textContent =
-            "Couldn't send that — please email me directly instead.";
-          contactFormStatus.classList.add("error");
-        } finally {
-          contactSubmitBtn.disabled = false;
+            "Sending…";
+
+
+          contactFormStatus.className =
+            "form-status";
+
+
+          try {
+
+            const response =
+              await fetch(
+                CONTACT_FORM_ENDPOINT,
+                {
+                  method: "POST",
+                  headers: {
+                    Accept:
+                      "application/json"
+                  },
+                  body:
+                    new FormData(
+                      contactForm
+                    )
+                }
+              );
+
+
+            if (response.ok) {
+
+              contactFormStatus.textContent =
+                "Message sent — thanks! I'll reply soon.";
+
+
+              contactFormStatus.classList.add(
+                "success"
+              );
+
+
+              contactForm.reset();
+
+
+              window.setTimeout(
+                closeContactModal,
+                1600
+              );
+
+            } else {
+
+              throw new Error(
+                "Request failed"
+              );
+
+            }
+
+          } catch (error) {
+
+            contactFormStatus.textContent =
+              "Couldn't send that — please email me directly instead.";
+
+
+            contactFormStatus.classList.add(
+              "error"
+            );
+
+          } finally {
+
+            contactSubmitBtn.disabled =
+              false;
+
+          }
+
         }
-      });
+      );
+
     }
 
   </script>
