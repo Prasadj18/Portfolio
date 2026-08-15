@@ -1412,13 +1412,13 @@ grid-template-columns:1fr;
 
   min-height: 190px;
 
-  background: linear-gradient(180deg, rgb(244, 204, 149), rgba(108, 103, 95, 0.856));
+  background: linear-gradient(180deg, rgb(226, 205, 176), rgb(221, 179, 131));
 
   border: 1px solid rgba(21, 19, 15, 0.886);
 
   border-radius: 12px;
 
-  box-shadow: 0 7px 15px rgba(116, 115, 115, 0.571), inset 0 -3px 14px rgba(0,0,0,0.12);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.571), inset 0 -3px 14px rgba(255, 240, 240, 0.59);
 
   transition: transform 0.60s cubic-bezier(0.22,0.8,0.25,1), box-shadow 0.60s ease, border-color 0.25s ease;
 }
