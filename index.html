@@ -59,7 +59,7 @@
   </nav>
 
 
-  <main>
+  <main id="portfolio-main">
 
     <!-- =========================
          HERO
@@ -106,7 +106,7 @@
 
             <a
               class="btn"
-              href="assets/Prasada.finalResume.pdf"
+              href="assets/Prasad.finalResume.pdf"
               target="_blank"
               rel="noopener"
               aria-label="View resume"
@@ -185,17 +185,10 @@
 
         <!-- HERO IMAGE -->
 
-        <div class="hero-art reveal">
-
-          <img
-            src="assets/Prasad photo.jpeg"
-            alt="Prasada Jahagirdar - Information Science & Engineering student"
-            loading="eager"
-            fetchpriority="high"
-          >
-
+        <div class="hero-art reveal" id="pixelTrailContainer">
+          <img src="assets/Prasad photo.jpeg" alt="Prasada Jahagirdar" id="pixelTrailImage" style="display: none;" crossorigin="anonymous">
+          <canvas id="pixelTrailCanvas" class="pixel-canvas"></canvas>
         </div>
-
       </div>
 
     </section>
@@ -243,329 +236,351 @@
 
           <!-- PROJECT 01 -->
 
-          <article class="project-card reveal">
+         <article
+           class="project-card reveal"
+           data-project-key="chat-app"
+           tabindex="0"
+           role="button"
+           aria-label="Open case study for Real-Time Chat Application"
+         >
 
-            <div class="project-art">
+           <div class="project-art">
 
-              <img
-                src="assets/realtime chat image.jpeg"
-                alt="Real-time communication application"
-                loading="lazy"
-              >
+             <img
+               src="assets/realtime chat image.jpeg"
+               alt="Real-time communication application"
+               loading="lazy"
+             >
 
-            </div>
+           </div>
 
-            <div class="project-body">
+           <div class="project-body">
 
-              <div class="project-num">
-                01 / FULL STACK
-              </div>
+             <div class="project-num">
+               01 / FULL STACK · REAL-TIME
+             </div>
 
-              <h3>
-                Real-Time Chat Application
-              </h3>
+             <h3>
+               Real-Time Chat Application
+             </h3>
 
-              <p>
-                Full-stack communication platform with one-to-one
-                messaging, authentication, AI chat assistance,
-                voice/video calling and a ledger module.
-              </p>
+             <p>
+               Full-stack real-time messaging platform for secure
+               one-to-one communication with instant delivery,
+               persistent chats, online presence, and rich file
+               sharing.
+             </p>
 
-              <div class="tags">
+             <div class="tags">
 
-                <span class="tag">React.js</span>
-                <span class="tag">Node.js</span>
-                <span class="tag">Socket.io</span>
-                <span class="tag">Firebase</span>
+               <span class="tag">React.js</span>
+               <span class="tag">Node.js</span>
+               <span class="tag">Express.js</span>
+               <span class="tag">MongoDB</span>
+               <span class="tag">Socket.IO</span>
+               <span class="tag">JWT</span>
 
-              </div>
+             </div>
 
-            </div>
+           </div>
 
-          </article>
-
-
-          <!-- PROJECT 02 -->
-
-          <article class="project-card reveal">
-
-            <div class="project-art">
-
-              <img
-                src="assets/blockchain.webp"
-                alt="Blockchain technology visualization"
-                loading="lazy"
-              >
-
-            </div>
-
-            <div class="project-body">
-
-              <div class="project-num">
-                02 / BLOCKCHAIN · ONGOING
-              </div>
-
-              <h3>
-                Paracetamol Supply Chain
-              </h3>
-
-              <p>
-                Blockchain platform for tracking pharmaceutical
-                batches from manufacturer to consumer using smart
-                contracts and QR verification.
-              </p>
-
-              <div class="tags">
-
-                <span class="tag">Solidity</span>
-                <span class="tag">Ethereum</span>
-                <span class="tag">Web3.js</span>
-                <span class="tag">MetaMask</span>
-
-              </div>
-
-            </div>
-
-          </article>
+         </article>
 
 
-          <!-- PROJECT 03 -->
+         <!-- PROJECT 02 -->
 
-          <article class="project-card reveal">
+         <article
+           class="project-card reveal"
+           data-project-key="paracetamol-supply-chain"
+           tabindex="0"
+           role="button"
+           aria-label="Open case study for Paracetamol Supply Chain"
+         >
 
-            <div class="project-art">
+           <div class="project-art">
 
-              <img
-                src="assets/clinicmanagement.png"
-                alt="Digital healthcare application"
-                loading="lazy"
-              >
+             <img
+               src="assets/blockchain.webp"
+               alt="Blockchain technology visualization"
+               loading="lazy"
+             >
 
-            </div>
+           </div>
 
-            <div class="project-body">
+           <div class="project-body">
 
-              <div class="project-num">
-                03 / WEB APPLICATION
-              </div>
+             <div class="project-num">
+               02 / BLOCKCHAIN · ONGOING
+             </div>
 
-              <h3>
-                Clinic Management System
-              </h3>
+             <h3>
+               Paracetamol Supply Chain
+             </h3>
 
-              <p>
-                Web application for patient registration,
-                appointment scheduling, billing and medical record
-                management backed by MongoDB.
-              </p>
+             <p>
+               Blockchain platform for tracking pharmaceutical
+               batches from manufacturer to consumer using smart
+               contracts and QR verification.
+             </p>
 
-              <div class="tags">
+             <div class="tags">
 
-                <span class="tag">Node.js</span>
-                <span class="tag">MongoDB</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML/CSS</span>
+               <span class="tag">Solidity</span>
+               <span class="tag">Ethereum</span>
+               <span class="tag">Web3.js</span>
+               <span class="tag">MetaMask</span>
 
-              </div>
+             </div>
 
-            </div>
+           </div>
 
-          </article>
+         </article>
+
+
+         <!-- PROJECT 03 -->
+
+         <article
+           class="project-card reveal"
+           data-project-key="expenseiq"
+           tabindex="0"
+           role="button"
+           aria-label="Open case study for ExpenseIQ"
+         >
+
+           <div class="project-art">
+
+             <img
+               src="assets/expense_tracker.png"
+               alt="ExpenseIQ smart expense tracker dashboard"
+               loading="lazy"
+             >
+
+           </div>
+
+           <div class="project-body">
+
+             <div class="project-num">
+               03 / FULL STACK
+             </div>
+
+             <h3>
+               ExpenseIQ
+             </h3>
+
+             <p>
+               Smart expense tracker — a full-stack personal finance
+               app for managing expenses, budgets, spending analytics,
+               and smart financial insights.
+             </p>
+
+             <div class="tags">
+
+               <span class="tag">React</span>
+               <span class="tag">Node.js</span>
+               <span class="tag">Express</span>
+               <span class="tag">MongoDB</span>
+               <span class="tag">Chart.js</span>
+
+             </div>
+
+           </div>
+
+         </article>
+
+
+         <!-- PROJECT 04 -->
+
+         <article
+           class="project-card reveal"
+           data-project-key="chatclone"
+           tabindex="0"
+           role="button"
+           aria-label="Open case study for ChatClone"
+         >
+
+           <div class="project-art">
+
+             <img
+               src="assets/chatclone.png"
+               alt="ChatClone self-hosted AI chat application"
+               loading="lazy"
+             >
+
+           </div>
+
+           <div class="project-body">
+
+             <div class="project-num">
+               04 / AI / SELF-HOSTED
+             </div>
+
+             <h3>
+               ChatClone
+             </h3>
+
+             <p>
+               Self-hosted AI chat application — a ChatGPT clone powered
+               by a local LLM, featuring real-time streaming, conversation
+               memory, authentication, and file uploads.
+             </p>
+
+             <div class="tags">
+
+               <span class="tag">React</span>
+               <span class="tag">Node.js</span>
+               <span class="tag">Express</span>
+               <span class="tag">Ollama</span>
+               <span class="tag">SQLite</span>
+               <span class="tag">JWT</span>
+
+             </div>
+
+           </div>
+
+         </article>
 
         </div>
 
       </div>
 
     </section>
+
+    <section
+     class="project-detail"
+     id="project-detail"
+     aria-live="polite"
+     aria-hidden="true"
+    >
+     <div class="container">
+       <div class="project-detail-shell">
+         <button
+           class="project-detail-close"
+           type="button"
+           aria-label="Close project detail view"
+         >
+           Close
+         </button>
+         <div id="project-detail-content"></div>
+       </div>
+     </div>
+    </section>
+
+
 <!-- =========================
-     CERTIFICATIONS
+         CERTIFICATIONS
 ========================= -->
 
     <section
-      class="cream-section torn-cream"
-      id="certifications"
+ class="cream-section torn-cream"
+ id="certifications"
     >
 
-      <div class="container">
+ <div class="container">
 
-        <div class="project-head reveal">
+   <div class="project-head reveal">
 
-          <div>
+         <div>
 
-            <div class="eyebrow">
-              Professional Learning
-            </div>
+           <div class="eyebrow">
+             Professional Learning
+           </div>
 
-            <h4 class="section-title">
-              Certifications
-              <br>
-              <span class="orange">
-                I've Earned.
-              </span>
-            </h4>
+           <h4 class="section-title">
+             Certifications
+             <br>
+             <span class="orange">
+               I've Earned.
+             </span>
+           </h4>
 
-          </div>
+         </div>
 
-          <p>
-            A collection of certifications that complement my academic
-            background and strengthen my expertise in software
-            development, version control, artificial intelligence,
-            and modern technologies.
-          </p>
+         <p>
+           A collection of certifications that complement my academic
+           background and strengthen my expertise in software
+           development, version control, artificial intelligence,
+           and modern technologies.
+         </p>
 
-        </div>
+   </div>
 
+   <div class="cert-grid">
 
-        <div class="cert-grid">
-
-          <!-- Certificate 01 -->
-
-          <article class="cert-card reveal">
-
-            <div class="cert-org">
-              IBM SkillsBuild
-            </div>
-
-            <h3>
-              AI Fundamentals: Foundations for Understanding AI
-            </h3>
-
-            <p>
-              Built a strong foundation in Artificial Intelligence,
-              covering core concepts, real-world applications,
-              and emerging AI technologies.
-            </p>
-
-            <div class="cert-footer">
-
-              <span>
-                Issued • July 2026
-              </span>
-
-              <a
-                href="assets/AIFundamentalsFoundationsforUnderstandingAI_Badge20260712-20-wws302 (1).pdf"
-                target="_blank"
-              >
-                View Certificate ↗
-              </a>
-
-            </div>
-
-          </article>
-
-
-          <!-- Certificate 02 -->
-
-          <article class="cert-card reveal">
-
-            <div class="cert-org">
-              Deloitte × Forage
-            </div>
-
-            <h3>
-              Technology Job Simulation
-            </h3>
-
-            <p>
-              Completed Deloitte's technology job simulation,
-              solving practical software engineering tasks and
-              strengthening industry-oriented development skills.
-            </p>
-
-            <div class="cert-footer">
-
-              <span>
-                Issued • July 2026
-              </span>
-
-              <a
-                href="assets/Deloitte.Certificate (1).pdf"
-                target="_blank"
-              >
-                View Certificate ↗
-              </a>
-
-            </div>
-
-          </article>
-
-
-          <!-- Certificate 03 -->
-
-          <article class="cert-card reveal">
-
-            <div class="cert-org">
-              Infosys Springboard
-            </div>
-
-            <h3>
-              Git Version Controlling Using Git
-            </h3>
-
-            <p>
-              Learned Git fundamentals, branching, merging,
-              collaborative workflows, and version control best
-              practices using Git and GitHub.
-            </p>
-
-            <div class="cert-footer">
-
-              <span>
-                Issued • September 2023
-              </span>
-
-              <a
-                href="assets/infosysSpringboard.pdf"
-                target="_blank"
-              >
-                View Certificate ↗
-              </a>
-
-            </div>
-
-          </article>
-
-
-          <!-- Certificate 04 -->
-
-          <article class="cert-card reveal">
-
-            <div class="cert-org">
-              Board Infinity
-            </div>
-
-            <h3>
-              Full Stack Development
-            </h3>
-
-            <p>
-              Gained practical knowledge of full-stack web
-              development, covering frontend, backend,
-              databases, and modern application development.
-            </p>
-
-            <div class="cert-footer">
-
-              <span>
-                Issued • March 2026
-              </span>
-
-              <a
-                href="assets/CERT-20260313-8327680 (1).pdf"
-                target="_blank"
-              >
-                View Certificate ↗
-              </a>
-
-            </div>
-
-          </article>
-
-        </div>
-
+  <!-- CERTIFICATION 01 -->
+  <article class="cert-card reveal">
+    <div class="cert-media">
+      <div class="cert-badge">01</div>
+      <!-- Add your certificate screenshot here -->
+      <img src="assets/AI fund.png" alt="IBM AI Fundamentals Certificate" loading="lazy">
+    </div>
+    <div class="cert-body">
+      <div class="cert-org">IBM SkillsBuild</div>
+      <h3>AI Fundamentals: Foundations for Understanding AI</h3>
+      <p>Built a strong foundation in Artificial Intelligence, covering core concepts, real-world applications, and emerging AI technologies.</p>
+      <div class="cert-footer">
+        <span class="cert-date"><span aria-hidden="true"></span> Issued: July 2026</span>
+        <a href="assets/AIFundamentalsFoundationsforUnderstandingAI_Badge20260712-20-wws302 (1).pdf" target="_blank" rel="noopener">View Certificate ↗</a>
       </div>
+    </div>
+  </article>
+
+  <!-- CERTIFICATION 02 -->
+  <article class="cert-card reveal">
+    <div class="cert-media">
+      <div class="cert-badge">02</div>
+      <img src="assets/deloitte.png" alt="Deloitte Job Simulation" loading="lazy">
+    </div>
+    <div class="cert-body">
+      <div class="cert-org">Deloitte × Forage</div>
+      <h3>Technology Job Simulation</h3>
+      <p>Completed Deloitte's technology job simulation, solving practical software engineering tasks and strengthening industry-oriented development skills.</p>
+      <div class="cert-footer">
+        <span class="cert-date"><span aria-hidden="true"></span> Issued: July 2026</span>
+        <a href="assets/Deloitte.Certificate (1).pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CERTIFICATION 03 -->
+  <article class="cert-card reveal">
+    <div class="cert-media">
+      <div class="cert-badge">03</div>
+      <img src="assets/infosys.png" alt="Infosys Git Certificate" loading="lazy">
+    </div>
+    <div class="cert-body">
+      <div class="cert-org">Infosys Springboard</div>
+      <h3>Git Version Controlling Using Git</h3>
+      <p>Learned Git fundamentals, branching, merging, collaborative workflows, and version control best practices using Git and GitHub.</p>
+      <div class="cert-footer">
+        <span class="cert-date"><span aria-hidden="true"></span> Issued: Sept 2023</span>
+        <a href="assets/infosysSpringboard.pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- CERTIFICATION 04 -->
+  <article class="cert-card reveal">
+    <div class="cert-media">
+      <div class="cert-badge">04</div>
+      <img src="assets/Board.png" alt="Full Stack Certificate" loading="lazy">
+    </div>
+    <div class="cert-body">
+      <div class="cert-org">Board Infinity</div>
+      <h3>Full Stack Development</h3>
+      <p>Gained practical knowledge of full-stack web development, covering frontend, backend, databases, and modern application development.</p>
+      <div class="cert-footer">
+        <span class="cert-date"><span aria-hidden="true"></span> Issued: March 2026</span>
+        <a href="assets/CERT-20260313-8327680 (1).pdf" target="_blank" rel="noopener">View Certificate ↗</a>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+ </div>
 
     </section>
+
     <!-- =========================
          SKILLS
     ========================= -->
@@ -678,7 +693,7 @@
           <h2 class="section-title">
               core
               <span class="orange">
-                cs
+                cs.
               </span>
             </h2>
 
@@ -956,7 +971,7 @@
           </div>
 
           <div class="fact">
-            <span>Achievement</span>
+            <span>Extracurricular</span>
             <span>1st Prize — Chess Competition in diploma</span>
           </div>
 
@@ -2277,6 +2292,256 @@
     }
 
 
+
+
+    /* Project Detail View */
+
+    const projectDetail =
+      document.getElementById("project-detail");
+
+    const projectDetailContent =
+      document.getElementById("project-detail-content");
+
+    const detailCloseButton =
+      document.querySelector(".project-detail-close");
+
+    const projectDetailData = {
+      "chat-app": {
+        title: "Real-Time Chat Application",
+        eyebrow: "Full stack · real-time",
+        summary:
+          "A secure messaging platform built for instant communication, persistent conversations, and smooth collaboration.",
+        description:
+          "The app was designed to feel responsive and reliable, with one-to-one messaging, read-state handling, presence awareness, and file support across a full-stack architecture.",
+        challenge:
+          "The main challenge was balancing real-time delivery with consistent user experience, while keeping communication secure and resilient.",
+        solution:
+          "I built a real-time communication flow using React on the frontend and Node/Express on the backend, with MongoDB persistence and Socket.IO for live updates.",
+        stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO", "JWT"],
+        image: "assets/realtime chat image.jpeg",
+        metrics: [
+          "Instant delivery",
+          "Persistent message history",
+          "Presence-aware chat",
+          "Secure auth"
+        ]
+      },
+      "paracetamol-supply-chain": {
+        title: "Paracetamol Supply Chain",
+        eyebrow: "Blockchain · verification",
+        summary:
+          "A blockchain-backed traceability platform that makes each pharmaceutical batch auditable from manufacturer to consumer.",
+        description:
+          "The solution focuses on supply-chain transparency, helping verify product origin and movement while making each stage traceable and tamper-conscious.",
+        challenge:
+          "The challenge was to create a product that preserved trust and auditability in a fragmented pharmaceutical supply chain.",
+        solution:
+          "I implemented a blockchain-driven workflow with smart-contract-backed verification and QR-based product traceability for end-to-end visibility.",
+        stack: ["Solidity", "Ethereum", "Web3.js", "MetaMask"],
+        image: "assets/blockchain.webp",
+        metrics: [
+          "Batch tracking",
+          "Smart contract logic",
+          "QR verification",
+          "Traceability flow"
+        ]
+      },
+      "expenseiq": {
+        title: "ExpenseIQ",
+        eyebrow: "Full stack · finance",
+        summary:
+          "A personal finance dashboard that turns spending habits into actionable insights through clean analytics and budgeting workflows.",
+        description:
+          "ExpenseIQ helps monitor budgets, classify spending, and understand consumption patterns with a refined dashboard experience.",
+        challenge:
+          "The goal was to make financial tracking useful without overwhelming the user, while keeping the experience interactive and clear.",
+        solution:
+          "I built the app around a structured full-stack architecture with analytics-first UX, enabling budget snapshots, expense tracking, and actionable trends.",
+        stack: ["React", "Node.js", "Express", "MongoDB", "Chart.js"],
+        image: "assets/expense_tracker.png",
+        metrics: [
+          "Budget visibility",
+          "Spending analytics",
+          "Expense tracking",
+          "Clear insights"
+        ]
+      },
+      "chatclone": {
+        title: "ChatClone",
+        eyebrow: "AI · self-hosted",
+        summary:
+          "A local AI chat application inspired by modern conversational UIs, designed to work with a self-hosted language model.",
+        description:
+          "The project emphasizes privacy, conversational memory, and a streamlined chat experience while staying practical for personal or local deployment.",
+        challenge:
+          "The challenge was to design a smooth AI chat experience while keeping the stack lightweight, self-hosted, and easy to operate locally.",
+        solution:
+          "I combined a React frontend with an Express backend and local LLM integration, layering in conversation memory, authentication, and upload support.",
+        stack: ["React", "Node.js", "Express", "Ollama", "SQLite", "JWT"],
+        image: "assets/chatclone.png",
+        metrics: [
+          "Local LLM flow",
+          "Persistent memory",
+          "Auth-protected access",
+          "File uploads"
+        ]
+      }
+    };
+
+    function renderProjectDetail(projectKey) {
+      const project = projectDetailData[projectKey];
+
+      if (!projectDetail || !projectDetailContent || !project) {
+        return;
+      }
+
+      const tags = project.stack
+        .map((tag) => `<span class="project-detail-tag">${tag}</span>`)
+        .join("");
+
+      const metrics = project.metrics
+        .map((metric) => `<li>${metric}</li>`)
+        .join("");
+
+      projectDetailContent.innerHTML = `
+        <article class="project-detail-panel">
+          <div class="project-detail-media">
+            <img src="${project.image}" alt="${project.title}" loading="eager">
+          </div>
+
+          <div class="project-detail-copy">
+            <div class="project-detail-kicker">${project.eyebrow}</div>
+            <h2>${project.title}</h2>
+            <p class="project-detail-summary">${project.summary}</p>
+            <div class="project-detail-tags">${tags}</div>
+
+            <div class="project-detail-columns">
+              <div>
+                <h3>Challenge</h3>
+                <p>${project.challenge}</p>
+              </div>
+
+              <div>
+                <h3>Approach</h3>
+                <p>${project.solution}</p>
+              </div>
+            </div>
+
+            <div class="project-detail-note">
+              <h3>What this project focuses on</h3>
+              <p>${project.description}</p>
+            </div>
+
+            <ul class="project-detail-metrics">
+              ${metrics}
+            </ul>
+          </div>
+        </article>
+      `;
+
+      // Step 1: Switch from display:none to display:block
+      document.body.classList.add("project-detail-open");
+      projectDetail.classList.add("is-open");
+      projectDetail.setAttribute("aria-hidden", "false");
+
+      // Step 2: Force the browser to calculate the layout (reflow) 
+      // so the transition can actually trigger.
+      void projectDetail.offsetWidth;
+
+      // Step 3: Add the animation class to fade it in
+      projectDetail.classList.add("is-animating");
+      
+      // Step 4: Scroll the window to the top of the new view smoothly
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+  function renderProjectDetail(projectKey) {
+      const project = projectDetailData[projectKey];
+
+      if (!projectDetail || !projectDetailContent || !project) {
+        return;
+      }
+
+      const tags = project.stack
+        .map((tag) => `<span class="project-detail-tag">${tag}</span>`)
+        .join("");
+
+      const metrics = project.metrics
+        .map((metric) => `<li>${metric}</li>`)
+        .join("");
+
+      projectDetailContent.innerHTML = `
+        <article class="project-detail-panel">
+          <div class="project-detail-media">
+            <img src="${project.image}" alt="${project.title}" loading="eager">
+          </div>
+
+          <div class="project-detail-copy">
+            <div class="project-detail-kicker">${project.eyebrow}</div>
+            <h2>${project.title}</h2>
+            <p class="project-detail-summary">${project.summary}</p>
+            <div class="project-detail-tags">${tags}</div>
+
+            <div class="project-detail-columns">
+              <div>
+                <h3>Challenge</h3>
+                <p>${project.challenge}</p>
+              </div>
+
+              <div>
+                <h3>Approach</h3>
+                <p>${project.solution}</p>
+              </div>
+            </div>
+
+            <div class="project-detail-note">
+              <h3>What this project focuses on</h3>
+              <p>${project.description}</p>
+            </div>
+
+            <ul class="project-detail-metrics">
+              ${metrics}
+            </ul>
+          </div>
+        </article>
+      `;
+
+      // Step 1: Switch from display:none to display:block
+      document.body.classList.add("project-detail-open");
+      projectDetail.classList.add("is-open");
+      projectDetail.setAttribute("aria-hidden", "false");
+
+      // Step 2: Force the browser to calculate the layout (reflow) 
+      // so the transition can actually trigger.
+      void projectDetail.offsetWidth;
+
+      // Step 3: Add the animation class to fade it in
+      projectDetail.classList.add("is-animating");
+      
+      // Step 4: Scroll the window to the top of the new view smoothly
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function closeProjectDetail() {
+      if (!projectDetail) return;
+
+      // Step 1: Remove animation class to trigger fade-out
+      projectDetail.classList.remove("is-animating");
+
+      // Step 2: Wait for CSS transition to finish before hiding structurally
+      setTimeout(() => {
+        projectDetail.classList.remove("is-open");
+        projectDetail.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("project-detail-open");
+        
+        // Re-align viewport to the projects section instantly to prevent jumping
+        const projectsSection = document.getElementById("projects");
+        if (projectsSection) {
+           projectsSection.scrollIntoView({ behavior: "instant" });
+        }
+      }, 400); // This matches the 0.4s defined in your CSS transition
+    }
+
     /* Letter Cascade Animation */
 
     function initLetterCascade() {
@@ -2609,9 +2874,6 @@
       }
 
 
-      document.body.style.overflow =
-        "hidden";
-
     }
 
 
@@ -2631,10 +2893,6 @@
         },
         220
       );
-
-
-      document.body.style.overflow =
-        "";
 
 
       if (lastFocusedElement) {
@@ -2809,6 +3067,239 @@
       );
 
     }
+    /* =========================
+   PIXEL IMAGE TRAIL (VANILLA JS)
+========================= */
+
+    class PixelImageTrail {
+      constructor(container, imageElement, options = {}) {
+        this.container = container;
+        this.image = imageElement;
+        
+        // Config options with defaults matching your React component
+        this.pixelSize = options.pixelSize || 36;
+        this.radius = options.radius || 58;
+        this.fadeDuration = options.fadeDuration || 900;
+        this.maxPixels = options.maxPixels || 84;
+        this.initialPixels = options.initialPixels || 24;
+
+        this.canvas = container.querySelector("canvas");
+        this.ctx = this.canvas.getContext("2d");
+
+        this.pixels = new Map();
+        this.reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        
+        this.width = 0;
+        this.height = 0;
+        this.frame = 0;
+        this.pointerInside = false;
+        this.hoveredKeys = new Set();
+        this.lastColumn = null;
+        this.lastRow = null;
+
+        this.init();
+      }
+
+      init() {
+        this.resize();
+        window.addEventListener("resize", () => this.resize());
+
+        this.container.addEventListener("pointerenter", (e) => this.onPointerEnter(e));
+        this.container.addEventListener("pointermove", (e) => this.onPointerMove(e));
+        this.container.addEventListener("pointerleave", () => this.onPointerLeave());
+        
+        if (this.image.complete) {
+          this.requestDraw();
+        } else {
+          this.image.addEventListener("load", () => this.requestDraw());
+        }
+      }
+
+      seedPixels() {
+        
+      }
+
+      resize() {
+        cancelAnimationFrame(this.frame);
+        const rect = this.container.getBoundingClientRect();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+        this.width = rect.width;
+        this.height = rect.height;
+        this.canvas.width = Math.round(this.width * dpr);
+        this.canvas.height = Math.round(this.height * dpr);
+        this.canvas.style.width = `${this.width}px`;
+        this.canvas.style.height = `${this.height}px`;
+        this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        this.pixels.clear();
+        this.seedPixels();
+        this.ctx.clearRect(0, 0, this.width, this.height);
+        this.frame = requestAnimationFrame((now) => this.draw(now));
+      }
+
+      drawPixel(pixel, opacity) {
+        if (!this.image.complete || !this.image.naturalWidth || !this.image.naturalHeight) {
+          return;
+        }
+
+        const size = Math.max(12, this.pixelSize);
+        const x = pixel.column * size;
+        const y = pixel.row * size;
+        
+        const coverScale = Math.max(
+          this.width / this.image.naturalWidth,
+          this.height / this.image.naturalHeight,
+        );
+        const renderedWidth = this.image.naturalWidth * coverScale;
+        const renderedHeight = this.image.naturalHeight * coverScale;
+        const offsetX = (this.width - renderedWidth) / 2;
+        const offsetY = (this.height - renderedHeight) / 2;
+
+        this.ctx.globalAlpha = opacity;
+        this.ctx.drawImage(
+          this.image,
+          (x - offsetX) / coverScale,
+          (y - offsetY) / coverScale,
+          size / coverScale,
+          size / coverScale,
+          x,
+          y,
+          size,
+          size,
+        );
+      }
+
+      draw(now) {
+        this.frame = 0;
+        this.ctx.clearRect(0, 0, this.width, this.height);
+
+        for (const [key, pixel] of this.pixels) {
+          if (this.pointerInside && this.hoveredKeys.has(key)) {
+            pixel.touchedAt = now;
+          }
+
+          const age = now - pixel.touchedAt;
+          const opacity = pixel.ambient
+            ? this.pointerInside && this.hoveredKeys.has(key)
+              ? 1
+              : 0.58
+            : this.reducedMotion
+              ? this.pointerInside
+                ? 1
+                : 0
+              : Math.max(0, 1 - age / Math.max(120, this.fadeDuration));
+
+          if (opacity <= 0) {
+            this.pixels.delete(key);
+            continue;
+          }
+
+          this.drawPixel(pixel, opacity * opacity * (3 - 2 * opacity));
+        }
+
+        this.ctx.globalAlpha = 1;
+        if (
+          !this.reducedMotion &&
+          [...this.pixels.values()].some((pixel) => !pixel.ambient)
+        ) {
+          this.frame = requestAnimationFrame((n) => this.draw(n));
+        }
+      }
+
+      requestDraw() {
+        if (!this.frame) this.frame = requestAnimationFrame((now) => this.draw(now));
+      }
+
+      trimTrail() {
+        const limit = Math.max(1, this.maxPixels);
+        const trailPixels = [...this.pixels.entries()].filter(
+          ([, pixel]) => !pixel.ambient,
+        );
+        if (trailPixels.length <= limit) return;
+
+        const oldest = trailPixels.sort((a, b) => a[1].touchedAt - b[1].touchedAt);
+        const excess = trailPixels.length - limit;
+        for (let index = 0; index < excess; index += 1) {
+          const entry = oldest[index];
+          if (entry) this.pixels.delete(entry[0]);
+        }
+      }
+
+      setTrailPixel(key, column, row, touchedAt) {
+        if (this.pixels.get(key)?.ambient) return;
+        this.pixels.set(key, { column, row, touchedAt, ambient: false });
+      }
+
+      paintAt(clientX, clientY) {
+        const size = Math.max(12, this.pixelSize);
+        const rect = this.container.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+        const centerColumn = Math.floor(x / size);
+        const centerRow = Math.floor(y / size);
+
+        if (this.reducedMotion) {
+          for (const [key, pixel] of this.pixels) {
+            if (!pixel.ambient) this.pixels.delete(key);
+          }
+        }
+
+        const now = performance.now();
+        this.hoveredKeys.clear();
+        const fromColumn = this.lastColumn ?? centerColumn;
+        const fromRow = this.lastRow ?? centerRow;
+        const columnDistance = centerColumn - fromColumn;
+        const rowDistance = centerRow - fromRow;
+        const steps = Math.max(1, Math.abs(columnDistance), Math.abs(rowDistance));
+
+        for (let step = 0; step <= steps; step += 1) {
+          const progress = step / steps;
+          const column = Math.round(fromColumn + columnDistance * progress);
+          const row = Math.round(fromRow + rowDistance * progress);
+          const key = `${column}:${row}`;
+          this.setTrailPixel(key, column, row, now);
+        }
+
+        this.lastColumn = centerColumn;
+        this.lastRow = centerRow;
+
+        this.trimTrail();
+        this.requestDraw();
+      }
+
+      onPointerEnter(event) {
+        this.pointerInside = true;
+        this.paintAt(event.clientX, event.clientY);
+      }
+
+      onPointerMove(event) {
+        this.pointerInside = true;
+        this.paintAt(event.clientX, event.clientY);
+      }
+
+      onPointerLeave() {
+        this.pointerInside = false;
+        this.hoveredKeys.clear();
+        this.lastColumn = null;
+        this.lastRow = null;
+      }
+    }
+
+    // Automatically initialize when page loads
+    document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("pixelTrailContainer");
+    const image = document.getElementById("pixelTrailImage");
+
+    if (container && image) {
+      new PixelImageTrail(container, image, {
+        pixelSize: 69,       // Decreased from 60 to 18 (smaller blocks = much higher block count!)
+        maxPixels: 600,      // Increased from 84 to 400 (allows way more blocks on screen at once)
+        fadeDuration: 6000,  // How long blocks stay visible
+        initialPixels: 0  // Starts completely dark/blank
+      });
+    }
+  });
 
   </script>
 
