@@ -1,9 +1,9 @@
 :root {
   --black: #0c0c0c;
   --black-2: #151513;
-  --cream: #ddc398;
+  --cream: #f2dab4;
   --cream-2: #b8b8b8;
-  --orange: #d5590b;
+  --orange: #e04e00;
   --muted: #b6afa4;
 
   --line: rgba(233, 225, 212, 0.17);
@@ -2743,7 +2743,7 @@ footer {
 .cta h3 {
   text-shadow:
     0px -1px 1px rgba(0, 0, 0, 0.9),
-    0px 2px 1px rgba(255, 255, 255, 0.08),
+    0px 2px 1px rgba(150, 150, 200, 0.08),
     0px 6px 16px rgba(0, 0, 0, 0.7);
 }
 
@@ -2751,7 +2751,7 @@ footer {
 .cta h3 span {
   text-shadow:
     0px -1px 1px rgba(0, 0, 0, 0.95),
-    0px 2px 1px rgba(255, 140, 60, 0.25),
+    0px 2px 1px rgba(150, 100, 60, 0.25),
     0px 6px 16px rgba(0, 0, 0, 0.7);
 }
 
