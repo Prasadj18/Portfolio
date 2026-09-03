@@ -1,13 +1,13 @@
 :root {
-  --black: #0c0c0c;
-  --black-2: #151513;
+  --black: #171717;
+  --black-2: #171717;
   --cream: #f2dab4;
   --cream-2: #b8b8b8;
-  --orange: #d24f08;
+  --orange: #e55a10;
   --muted: #b6afa4;
 
   --line: rgba(233, 225, 212, 0.17);
-  --line-dark: rgba(8, 8, 7, 0.2);
+  --line-dark: rgba(2, 2, 2, 0.2);
 
   --max: 1280px;
 
@@ -28,7 +28,7 @@
   --project-lift: -12px;
   transform: perspective(1000px) translateY(var(--project-lift)) rotateX(var(--project-tilt-x)) rotateY(var(--project-tilt-y));
   border-color: var(--orange);
-  box-shadow: 0 30px 60px rgba(2, 2, 2, 0.45), 0 0 25px rgba(207, 85, 9, 0.15), inset 0 -6px 18px rgba(0,0,0,0.24);
+  box-shadow: 0 30px 60px rgba(15, 14, 14, 0.45), 0 0 25px rgba(207, 85, 9, 0.15), inset 0 -6px 18px rgba(0,0,0,0.24);
 }
 
 * {
@@ -63,17 +63,28 @@ button {
   color: var(--black);
 }
 
+/* =========================================
+   TECHNICAL GRID BACKGROUND
+========================================= */
+
+body {
+  font-family: var(--body);
+  background: var(--black);
+  color: var(--cream);
+  overflow-x: hidden;
+  position: relative;
+}
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 20;
-  opacity: 0.18;
+  z-index: 0;
 
   background-image:
     linear-gradient(
-      rgba(0, 0, 0, 0.045) 1px,
+      rgba(255, 255, 255, 0.045) 1px,
       transparent 1px
     ),
     linear-gradient(
@@ -83,12 +94,48 @@ body::before {
     );
 
   background-size: 48px 48px;
+  opacity: 0.75;
 
   mask-image: linear-gradient(
     to bottom,
-    rgb(29, 28, 28),
-    transparent 92%
+    black 0%,
+    black 70%,
+    transparent 100%
   );
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 70%,
+    transparent 100%
+  );
+}
+
+nav,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+
+  top: 5%;
+  right: 5%;
+
+  background: radial-gradient(
+    circle,
+    rgba(210, 79, 8, 0.07) 0%,
+    rgba(210, 79, 8, 0.025) 35%,
+    transparent 70%
+  );
+
+  pointer-events: none;
+  z-index: 0;
 }
 
 .container {
@@ -159,7 +206,7 @@ nav {
 
   border-bottom: 1px solid var(--line);
 
-  background: rgba(8, 8, 7, 0.82);
+  background: rgba(22, 22, 22, 0.82);
 
   backdrop-filter: blur(14px);
 }
@@ -671,8 +718,8 @@ nav {
     linear-gradient(
       90deg,
       var(--black) 0%,
-      rgba(12, 12, 12, 0.92) 10%,
-      rgba(12, 12, 12, 0.45) 25%,
+      rgba(24, 24, 24, 0.92) 10%,
+      rgba(21, 21, 21, 0.45) 25%,
       transparent 46%
     ),
     linear-gradient(
@@ -2742,17 +2789,17 @@ footer {
 .section-title,
 .cta h3 {
   text-shadow:
-    0px -1px 1px rgba(0, 0, 0, 0.9),
+    0px 0ch 1px rgba(0, 0, 0, 0.9),
     0px 1px 1px rgba(150, 150, 200, 0.08),
-    0px 4px 6px rgba(0, 0, 0, 0.7);
+    0px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .section-title .orange,
 .cta h3 span {
   text-shadow:
-    0px -1px 1px rgba(0, 0, 0, 0.95),
+    0px 0ch 1px rgba(0, 0, 0, 0.95),
     0px 1px 1px rgba(150, 100, 60, 0.25),
-    0px 4px 6px rgba(0, 0, 0, 0.7);
+    0px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #nameAnimation,
@@ -2775,3 +2822,4 @@ footer {
   overflow: hidden;
   touch-action: pan-y;
 }
+
