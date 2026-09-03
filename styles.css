@@ -84,12 +84,12 @@ body::before {
 
   background-image:
     linear-gradient(
-      rgba(255, 255, 255, 0.045) 1px,
+      rgba(255, 255, 255, 0.048) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.045) 1px,
+      rgba(255, 255, 255, 0.03) 1px,
       transparent 1px
     );
 
@@ -98,15 +98,15 @@ body::before {
 
   mask-image: linear-gradient(
     to bottom,
-    black 0%,
-    black 70%,
+    rgba(22, 22, 22, 0.211) 0%,
+    rgba(23, 23, 23, 0.368) 70%,
     transparent 100%
   );
 
   -webkit-mask-image: linear-gradient(
     to bottom,
-    black 0%,
-    black 70%,
+    rgba(22, 22, 22, 0.951) 0%,
+    rgb(23, 23, 23) 70%,
     transparent 100%
   );
 }
@@ -206,7 +206,7 @@ nav {
 
   border-bottom: 1px solid var(--line);
 
-  background: rgba(22, 22, 22, 0.82);
+  background: rgba(31, 31, 31, 0.82);
 
   backdrop-filter: blur(14px);
 }
@@ -718,15 +718,15 @@ nav {
     linear-gradient(
       90deg,
       var(--black) 0%,
-      rgba(22, 22, 22, 0.92) 10%,
-      rgba(21, 21, 21, 0.45) 25%,
+      rgba(22, 22, 22, 0) 10%,
+      rgba(30, 30, 30, 0) 25%,
       transparent 46%
     ),
     
     linear-gradient(
       180deg,
       transparent 52%,
-      rgba(26, 26, 26, 0.28) 72%,
+      rgba(26, 26, 26, 0) 72%,
       var(--black) 100%
     );
 
@@ -750,9 +750,9 @@ nav {
 
   background: linear-gradient(
     90deg,
-    rgba(25, 25, 25, 0) 0%,
-    rgba(29, 29, 29, 0.35) 45%,
-    rgba(26, 26, 26, 0.65) 70%,
+    rgba(36, 36, 36, 0) 0%,
+    rgba(49, 49, 49, 0) 45%,
+    rgba(26, 26, 26, 0) 70%,
     var(--black) 100%
   );
 }
@@ -878,7 +878,7 @@ nav {
 
   max-width: 650px;
 
-  color: #3e3933;
+  color: #302d2a;
 }
 
 .project-grid {
@@ -2790,7 +2790,7 @@ footer {
 .section-title,
 .cta h3 {
   text-shadow:
-    0px 0ch 1px rgba(0, 0, 0, 0.9),
+    0px 0ch 1px rgba(18, 18, 18, 0.9),
     0px 1px 1px rgba(150, 150, 200, 0.08),
     0px 2px 4px rgba(0, 0, 0, 0.7);
 }
